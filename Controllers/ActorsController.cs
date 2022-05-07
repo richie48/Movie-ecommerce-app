@@ -51,7 +51,7 @@ namespace new_testapp.Controllers
         {
             var actionDetails= await _service.GetByIdAsync(id);
 
-            if (actionDetails == null) return View("Empty");
+            if (actionDetails == null) return View("NotFound");
             return View(actionDetails);
 
         }
@@ -60,7 +60,7 @@ namespace new_testapp.Controllers
         public async Task<IActionResult> Edit(int id)
         {
             var actionDetails = await _service.GetByIdAsync(id);
-            if (actionDetails == null) return View("Not Found");
+            if (actionDetails == null) return View("NotFound");
             return View(actionDetails);
         }
 
@@ -81,7 +81,7 @@ namespace new_testapp.Controllers
         public async Task<IActionResult> Delete(int id)
         {
             var actionDetails = await _service.GetByIdAsync(id);
-            if (actionDetails == null) return View("Not Found");
+            if (actionDetails == null) return View("NotFound");
             return View();
         }
 
@@ -91,7 +91,7 @@ namespace new_testapp.Controllers
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var actorDetails = await _service.GetByIdAsync(id);
-            if (actorDetails == null) return View("Not Found");
+            if (actorDetails == null) return View("NotFound");
 
             await _service.DeleteAsync(id);
             return RedirectToAction(nameof(Index));
