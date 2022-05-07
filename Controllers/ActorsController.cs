@@ -31,6 +31,7 @@ namespace new_testapp.Controllers
         }
 
 
+        //post Actors/Create
         [HttpPost]
         public async Task<IActionResult> Create([Bind("FullName,ProfilePictureURL,Bio")]Actor actor)
         {
@@ -82,7 +83,7 @@ namespace new_testapp.Controllers
         {
             var actionDetails = await _service.GetByIdAsync(id);
             if (actionDetails == null) return View("NotFound");
-            return View();
+            return View(actionDetails);
         }
 
 
