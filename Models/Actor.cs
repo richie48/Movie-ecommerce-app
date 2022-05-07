@@ -1,10 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using new_testapp.Data.Base;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace new_testapp.Models
 {
-    public class Actor
+    public class Actor:IEntityBase
     {
+        //The values in the id key will simply be overwritten by the id field in ientitybase
         [Key]
         public int Id { get; set; }
 
