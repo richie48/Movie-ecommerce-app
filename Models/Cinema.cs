@@ -1,9 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using new_testapp.Data.Base;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace new_testapp.Models
 {
-    public class Cinema
+    public class Cinema:IEntityBase
     {
         [Key]
         public int Id { get; set; }
