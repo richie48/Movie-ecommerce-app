@@ -35,6 +35,8 @@ namespace new_testapp
 
             //services configuration
             services.AddScoped<IActorsService, ActorsService>();
+            services.AddScoped<IProducersService,ProducerService>();
+            services.AddScoped<ICinemasService, CinemasService>();
 
             services.AddControllersWithViews();
         }
