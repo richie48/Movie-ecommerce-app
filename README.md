@@ -49,7 +49,7 @@ Run the application:
 dotnet run
 ```
 
-The application will be available at https://localhost:5001.
+The application will be available at localhost 5001
 
 ### 📦 Deployment
 This project includes an azure-pipelines.yml file for setting up continuous integration and deployment using Azure Pipelines. Configure your Azure DevOps project and connect it to this repository to automate builds and deployments.
